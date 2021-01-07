@@ -3,7 +3,7 @@ import classes from './Profile.module.css';
 
 function Profile() {
     return (
-        <div className={classes.content}>
+        <div>
             <div>
                 <img
                     src="http://host1.loc/img/islands.jpg"
@@ -12,7 +12,7 @@ function Profile() {
             <div>
                 ava + description
             </div>
-            <MyPosts />
+            <MyPosts/>
         </div>
     );
 }

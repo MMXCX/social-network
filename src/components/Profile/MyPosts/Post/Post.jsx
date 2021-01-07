@@ -6,7 +6,7 @@ function Post(props) {
             <img src="http://host1.loc/img/avatar.jpg" alt="avatar"/>
             {props.message}
             <div>
-                <span>Like {props.likes}</span>
+                <span>Like</span> {props.likesCount}
             </div>
         </div>
     );
