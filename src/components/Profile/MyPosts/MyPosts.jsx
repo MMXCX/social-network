@@ -2,6 +2,11 @@ import Post from './Post/Post';
 import classes from './MyPosts.module.css';
 
 function MyPosts() {
+
+    let obj = {
+        message: "MESSAGE 1"
+    }
+
     return (
         <div>
             My posts
@@ -10,8 +15,8 @@ function MyPosts() {
                 <button>Add Post</button>
             </div>
             <div className={classes.posts}>
-                <Post />
-                <Post />
+                <Post message={obj.message} likes={5} />
+                <Post message="It's my first Post" likes={9} />
             </div>
         </div>
     );

@@ -1,12 +1,12 @@
 import classes from './Post.module.css';
 
-function Post() {
+function Post(props) {
     return (
         <div className={classes.item}>
             <img src="http://host1.loc/img/avatar.jpg" alt="avatar"/>
-            post1
+            {props.message}
             <div>
-                <span>Like</span>
+                <span>Like {props.likes}</span>
             </div>
         </div>
     );
