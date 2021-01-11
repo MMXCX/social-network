@@ -13,6 +13,7 @@
 
 .dialogs .dialogsItems .active {
     color: gold;
+    text-decoration: none;
 }
 
 .dialogs .messages {
