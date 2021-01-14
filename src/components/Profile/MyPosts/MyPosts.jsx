@@ -1,5 +1,6 @@
 import Post from './Post/Post';
 import classes from './MyPosts.module.css';
+import {Button} from 'antd';
 
 function MyPosts() {
 
@@ -8,11 +9,15 @@ function MyPosts() {
     }
 
     return (
-        <div>
-            My posts
+        <div className={classes.postsBlock}>
+            <h3>My posts</h3>
             <div>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button>Add Post</button>
+                <div>
+                    <textarea name="" id="" cols="30" rows="4"></textarea>
+                </div>
+                <div>
+                    <Button type="primary">Add Post</Button>
+                </div>
             </div>
             <div className={classes.posts}>
                 <Post message={obj.message} likesCount="5"/>
