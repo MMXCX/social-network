@@ -4,9 +4,12 @@ import {Button} from 'antd';
 
 function MyPosts() {
 
-    let obj = {
-        message: "MESSAGE 1"
-    }
+    let postsData = [
+        {id: 1, message: 'It\'s my first Post', likesCount: 5},
+        {id: 2, message: 'Very Famoust Post!!!', likesCount: 9},
+        {id: 3, message: 'Worstest post in the world(', likesCount: 55},
+        {id: 4, message: 'It\'s my first Post', likesCount: 0}
+    ];
 
     return (
         <div className={classes.postsBlock}>
@@ -20,8 +23,10 @@ function MyPosts() {
                 </div>
             </div>
             <div className={classes.posts}>
-                <Post message={obj.message} likesCount="5"/>
-                <Post message="It's my first Post" likesCount="9"/>
+                <Post message={postsData[0].message} likesCount={postsData[0].likesCount}/>
+                <Post message={postsData[1].message} likesCount={postsData[1].likesCount}/>
+                <Post message={postsData[2].message} likesCount={postsData[2].likesCount}/>
+                <Post message={postsData[3].message} likesCount={postsData[3].likesCount}/>
             </div>
         </div>
     );
