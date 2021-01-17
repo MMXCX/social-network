@@ -16,9 +16,12 @@ function App(props) {
                 <Navbar/>
                 <div className="app-wrapper-content">
                     <Switch>
-                        <Route path={"/profile"} component={<Profile posts={props.posts}/>}/>
-                        <Route path={"/dialogs"}
-                               component={<Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
+                        <Route path={"/profile"}>
+                            <Profile posts={props.posts}/>
+                        </Route>
+                        <Route path={"/dialogs"}>
+                            <Dialogs dialogs={props.dialogs} messages={props.messages}/>
+                        </Route>
                         <Route path={"/news"} component={News}/>
                         <Route path={"/music"} component={Music}/>
                         <Route path={"/settings"} component={Settings}/>
