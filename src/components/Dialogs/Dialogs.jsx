@@ -4,12 +4,11 @@ import Message from './Message/Message';
 
 function Dialogs(props) {
 
-
     let dialogsElements = props.state.dialogs.map(
-        d => <DialogItem name={d.name} id={d.id}/>
+        d => <DialogItem name={d.name} id={d.id} avatarUrl={d.avatarUrl}/>
     );
     let messagesElements = props.state.messages.map(
-        m => <Message message={m.message}/>
+        m => <Message message={m.message} side={m.side}/>
     );
 
 

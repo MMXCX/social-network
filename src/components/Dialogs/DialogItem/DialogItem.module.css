@@ -1,5 +1,17 @@
 .dialogItem {
+    padding: 10px;
+    border: 1px solid #030;
+    margin: 5px;
+}
 
+.dialogItem a {
+    color: #44ff44;
+}
+
+.dialogItem img {
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
 }
 
 .active {

@@ -6,10 +6,20 @@
 }
 
 .item a {
-    color: white;
+    color: #090;
     text-decoration: none;
 }
 
+.item a:hover {
+    color: black;
+    background-color: #0f0;
+}
+
 .item a.active {
-    color: #0f0;
+    color: #4f4;
+}
+
+.item a.active:hover {
+    color: black;
+    background-color: #0f0;
 }

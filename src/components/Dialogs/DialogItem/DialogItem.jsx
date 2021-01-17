@@ -5,9 +5,12 @@ function DialogItem(props) {
     let path = "/dialogs/" + props.id;
 
     return (
-        <div className={classes.dialogItem}>
-            <NavLink to={path} activeClassName={classes.active}>{props.name}</NavLink>
-        </div>
+        <NavLink to={path} activeClassName={classes.active}>
+            <div className={classes.dialogItem}>
+                <img src={props.avatarUrl} alt="avatar"/>
+                {props.name}
+            </div>
+        </NavLink>
     );
 }
 

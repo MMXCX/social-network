@@ -1,3 +1,18 @@
-.dialogs .messages .message {
+.message {
+    border: 1px solid #fff;
+    background-color: #666;
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
 
+.from {
+    text-align: right;
+}
+
+.to {
+    text-align: left;
 }
