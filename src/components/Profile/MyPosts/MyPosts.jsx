@@ -4,13 +4,6 @@ import {Button} from 'antd';
 
 function MyPosts(props) {
 
-    // let posts = [
-    //     {id: 1, message: 'It\'s my first Post', likesCount: 5},
-    //     {id: 2, message: 'Very Famoust Post!!!', likesCount: 9},
-    //     {id: 3, message: 'Worstest post in the world(', likesCount: 55},
-    //     {id: 4, message: 'It\'s my first Post', likesCount: 0}
-    // ];
-
     let postsElements = props.posts.map(
         el => <Post message={el.message} likesCount={el.likesCount}/>
     );
