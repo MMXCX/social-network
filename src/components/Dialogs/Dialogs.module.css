@@ -7,19 +7,6 @@
     padding: 10px;
 }
 
-.dialogs .dialogsItems .dialog {
-
-}
-
-.dialogs .dialogsItems .active {
-    color: gold;
-    text-decoration: none;
-}
-
 .dialogs .messages {
     padding: 10px;
-}
-
-.dialogs .messages .message {
-
 }

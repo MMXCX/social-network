@@ -8,7 +8,7 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 
-function App() {
+function App(props) {
     return (
         <Router>
             <div className="app-wrapper">
@@ -16,8 +16,9 @@ function App() {
                 <Navbar/>
                 <div className="app-wrapper-content">
                     <Switch>
-                        <Route path={"/profile"} component={Profile}/>
-                        <Route path={"/dialogs"} component={Dialogs}/>
+                        <Route path={"/profile"} component={<Profile posts={props.posts}/>}/>
+                        <Route path={"/dialogs"}
+                               component={<Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
                         <Route path={"/news"} component={News}/>
                         <Route path={"/music"} component={Music}/>
                         <Route path={"/settings"} component={Settings}/>
