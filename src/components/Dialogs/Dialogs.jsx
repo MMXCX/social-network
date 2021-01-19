@@ -1,6 +1,7 @@
 import classes from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
+import SendMessageBlock from './SendMessageBlock/SendMessageBlock';
 
 function Dialogs(props) {
 
@@ -20,6 +21,7 @@ function Dialogs(props) {
             </div>
             <div className={classes.messages}>
                 {messagesElements}
+                <SendMessageBlock/>
             </div>
         </div>
     );
