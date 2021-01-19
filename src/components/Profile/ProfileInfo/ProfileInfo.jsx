@@ -6,7 +6,7 @@ function ProfileInfo() {
             <div className={classes.profileImage}>
                 <img
                     src="http://host1.loc/img/islands.jpg"
-                    alt="image"/>
+                    alt="background"/>
             </div>
             <div className={classes.descriptionBlock}>
                 ava + description
