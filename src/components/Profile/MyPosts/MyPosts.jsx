@@ -1,7 +1,9 @@
 import Post from './Post/Post';
 import classes from './MyPosts.module.css';
-import {Button} from 'antd';
+import {Button, Input} from 'antd';
 import React from 'react';
+
+const {TextArea} = Input;
 
 function MyPosts(props) {
 
@@ -17,12 +19,17 @@ function MyPosts(props) {
         newPostElement.current.value = '';
     }
 
+    function onChangeInput() {
+        let text = newPostElement.current.value;
+        props.addPost(text);
+    }
+
     return (
         <div className={classes.postsBlock}>
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea ref={newPostElement} name="" id="" cols="30" rows="4"></textarea>
+                    <textarea onChange={onChangeInput} rows={4} ref={newPostElement}/>
                 </div>
                 <div>
                     <Button onClick={addPost} type="primary">Add Post</Button>
