@@ -1,20 +1,27 @@
 import classes from './SendMessageBlock.module.css';
-import {Button} from 'antd';
+import {Button, Input} from 'antd';
 import * as React from "react";
 
-function SendMessageBlock() {
+const {TextArea} = Input;
+
+function SendMessageBlock(props) {
 
     let textareaElement = React.createRef();
 
-    function onSendButtonClick() {
-        let text = textareaElement.current.value;
-        alert(text)
+    function addMessage() {
+        props.addMessage();
+    }
+
+    function onMessageChange() {
+        let message = textareaElement.current.value;
+        props.updateNewMessageText(message);
     }
 
     return (
         <>
-            <textarea ref={textareaElement} name="" id="" cols="30" rows="5"></textarea>
-            <Button onClick={onSendButtonClick} type="danger">Send-></Button>
+            <textarea onChange={onMessageChange} ref={textareaElement} name="" id="" cols="30"
+                      rows="5" value={props.messageText}/>
+            <Button onClick={addMessage} type="danger">Send-></Button>
         </>
     );
 }

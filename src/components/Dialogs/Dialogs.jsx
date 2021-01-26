@@ -5,13 +5,12 @@ import SendMessageBlock from './SendMessageBlock/SendMessageBlock';
 
 function Dialogs(props) {
 
-    let dialogsElements = props.state.dialogs.map(
+    let dialogsElements = props.dialogPage.dialogs.map(
         d => <DialogItem name={d.name} id={d.id} avatarUrl={d.avatarUrl}/>
     );
-    let messagesElements = props.state.messages.map(
+    let messagesElements = props.dialogPage.messages.map(
         m => <Message message={m.message} side={m.side}/>
     );
-
 
 
     return (
@@ -21,7 +20,11 @@ function Dialogs(props) {
             </div>
             <div className={classes.messages}>
                 {messagesElements}
-                <SendMessageBlock/>
+                <SendMessageBlock
+                    addMessage={props.addMessage}
+                    updateNewMessageText={props.updateNewMessageText}
+                    messageText={props.messageText}
+                />
             </div>
         </div>
     );

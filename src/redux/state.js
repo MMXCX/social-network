@@ -26,11 +26,12 @@ let state = {
             {id: 4, message: 'And some))', side: 'to'},
             {id: 5, message: '4th message', side: 'to'},
             {id: 6, message: 'The last message in this array/', side: 'from'}
-        ]
+        ],
+        newMessageText: 'Write something here...'
     }
 };
 
-window.state = state;
+window.state = state.dialogsPage;
 
 export function addPost() {
     let newPost = {
@@ -46,6 +47,23 @@ export function addPost() {
 
 export function updateNewPostText(newText) {
     state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+export function addMessage() {
+    let newMessage = {
+        id: 7,
+        message: state.dialogsPage.newMessageText,
+        side: 'to'
+    }
+
+    state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newMessageText = '';
+    rerenderEntireTree(state);
+}
+
+export function updateNewMessageText(newMessage) {
+    state.dialogsPage.newMessageText = newMessage;
     rerenderEntireTree(state);
 }
 
