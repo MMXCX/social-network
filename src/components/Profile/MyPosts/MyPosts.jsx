@@ -14,14 +14,12 @@ function MyPosts(props) {
     let newPostElement = React.createRef();
 
     function addPost() {
-        let text = newPostElement.current.value;
-        props.addPost(text);
-        newPostElement.current.value = '';
+        props.addPost();
     }
 
-    function onChangeInput() {
+    function onPostChange() {
         let text = newPostElement.current.value;
-        props.addPost(text);
+        props.updateNewPostText(text);
     }
 
     return (
@@ -29,7 +27,8 @@ function MyPosts(props) {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea onChange={onChangeInput} rows={4} ref={newPostElement}/>
+                    <textarea onChange={onPostChange} rows={4} ref={newPostElement}
+                              value={props.newPostText}/>
                 </div>
                 <div>
                     <Button onClick={addPost} type="primary">Add Post</Button>
