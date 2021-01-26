@@ -31,7 +31,7 @@ let state = {
             {id: 5, message: '4th message', side: 'to'},
             {id: 6, message: 'The last message in this array/', side: 'from'}
         ],
-        newMessageText: 'Write something here...'
+        newMessageText: 'Write something here....'
     }
 };
 
