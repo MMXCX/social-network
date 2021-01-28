@@ -1,5 +1,5 @@
-const store = {
-    state: {
+let store = {
+    _state: {
         profilePage: {
             posts: [
                 {id: 1, message: 'It\'s my first Post', likesCount: 5},
@@ -29,42 +29,46 @@ const store = {
             newMessageText: 'Write something here....'
         }
     },
-    rerenderEntireTree: () => {
+    getState() {
+        return this._state;
+    },
+    _callSubscriber() {
       console.log("State is Changed")
     },
-    addPost: () => {
+    addPost() {
+        let _newPost = this._state.profilePage.newPostText;
         let newPost = {
             id: 5,
-            message: this.state.profilePage.newPostText,
+            message: _newPost,
             likesCount: 0
         }
-        this.state.profilePage.posts.push(newPost);
-        this.state.profilePage.newPostText = '';
-        this.rerenderEntireTree(this.state);
+        this._state.profilePage.posts.push(newPost);
+        this._state.profilePage.newPostText = '';
+        this._callSubscriber(this._state);
     },
-    updateNewPostText: (newText) => {
-        this.state.profilePage.newPostText = newText;
-        this.rerenderEntireTree(this.state);
+    updateNewPostText(newText) {
+        this._state.profilePage.newPostText = newText;
+        this._callSubscriber(this._state);
     },
-    addMessage: () => {
+    addMessage() {
+        let _newMessage = this._state.dialogsPage.newMessageText;
         let newMessage = {
             id: 7,
-            message: this.state.dialogsPage.newMessageText,
+            message: _newMessage,
             side: 'to'
         }
 
-        this.state.dialogsPage.messages.push(newMessage);
-        this.state.dialogsPage.newMessageText = '';
-        this.rerenderEntireTree(this.state);
+        this._state.dialogsPage.messages.push(newMessage);
+        this._state.dialogsPage.newMessageText = '';
+        this._callSubscriber(this._state);
     },
-    updateNewMessageText: (newMessage) => {
-        this.state.dialogsPage.newMessageText = newMessage;
-        this.rerenderEntireTree(this.state);
+    updateNewMessageText(newMessage) {
+        this._state.dialogsPage.newMessageText = newMessage;
+        this._callSubscriber(this._state);
     },
-    subscribe: (observe) => {
+    subscribe(observe) {
         console.log(observe);
-        debugger;
-        this.rerenderEntireTree = observe;
+        this._callSubscriber = observe;
     }
 }
 

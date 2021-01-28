@@ -165,7 +165,8 @@
       <workItem from="1611858786893" duration="12000" />
       <workItem from="1611858814749" duration="11000" />
       <workItem from="1611858845430" duration="7000" />
-      <workItem from="1611858935821" duration="2634000" />
+      <workItem from="1611858935821" duration="7570000" />
+      <workItem from="1611867166265" duration="27000" />
     </task>
     <servers />
   </component>
@@ -192,8 +193,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/redux/state.js</url>
-          <line>94</line>
-          <properties lambdaOrdinal="-1" />
+          <line>98</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
