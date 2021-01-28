@@ -25,7 +25,7 @@ function App(props) {
                                render={() => <Dialogs dialogPage={props.state.dialogsPage}
                                                       addMessage={props.addMessage}
                                                       updateNewMessageText={props.updateNewMessageText}
-                                                      messageText={props.state.dialogsPage.newMessageText}
+                                                      messageText={<props className="state dialogsPage newMessageText"></props>}
                                />}/>
                         <Route path={"/news"} component={News}/>
                         <Route path={"/music"} component={Music}/>
