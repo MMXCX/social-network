@@ -21,8 +21,7 @@ function Dialogs(props) {
             <div className={classes.messages}>
                 {messagesElements}
                 <SendMessageBlock
-                    addMessage={props.addMessage}
-                    updateNewMessageText={props.updateNewMessageText}
+                    dispatch={props.dispatch}
                     messageText={props.messageText}
                 />
             </div>

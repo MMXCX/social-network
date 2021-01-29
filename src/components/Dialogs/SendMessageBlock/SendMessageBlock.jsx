@@ -9,12 +9,17 @@ function SendMessageBlock(props) {
     let textareaElement = React.createRef();
 
     function addMessage() {
-        props.addMessage();
+        props.dispatch({
+            type: 'ADD-MESSAGE'
+        });
     }
 
     function onMessageChange() {
         let message = textareaElement.current.value;
-        props.updateNewMessageText(message);
+        props.dispatch({
+            type: 'UPDATE-NEW-MESSAGE-TEXT',
+            newMessage: message
+        });
     }
 
     return (
