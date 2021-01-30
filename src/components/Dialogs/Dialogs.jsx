@@ -22,7 +22,7 @@ function Dialogs(props) {
                 {messagesElements}
                 <SendMessageBlock
                     dispatch={props.dispatch}
-                    messageText={props.messageText}
+                    messageText={props.dialogPage.newMessageText}
                 />
             </div>
         </div>

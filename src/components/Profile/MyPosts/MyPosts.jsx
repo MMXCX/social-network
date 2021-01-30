@@ -2,8 +2,10 @@ import Post from './Post/Post';
 import classes from './MyPosts.module.css';
 import {Button, Input} from 'antd';
 import React from 'react';
+import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../redux/state';
 
 const {TextArea} = Input;
+
 
 function MyPosts(props) {
 
@@ -14,15 +16,13 @@ function MyPosts(props) {
     let newPostElement = React.createRef();
 
     function addPost() {
-        props.dispatch({type: 'ADD-POST'});
+        props.dispatch(addPostActionCreator());
     }
 
     function onPostChange() {
         let text = newPostElement.current.value;
-        props.dispatch({
-            type: 'UPDATE-NEW-POST-TEXT',
-            newText: text
-        });
+
+        props.dispatch(updateNewPostTextActionCreator(text));
     }
 
     return (

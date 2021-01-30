@@ -1,6 +1,7 @@
 import classes from './SendMessageBlock.module.css';
 import {Button, Input} from 'antd';
 import * as React from "react";
+import {addMessageActionCreator, updateNewMessageTextActionCreator} from '../../../redux/state';
 
 const {TextArea} = Input;
 
@@ -9,17 +10,12 @@ function SendMessageBlock(props) {
     let textareaElement = React.createRef();
 
     function addMessage() {
-        props.dispatch({
-            type: 'ADD-MESSAGE'
-        });
+        props.dispatch(addMessageActionCreator());
     }
 
     function onMessageChange() {
         let message = textareaElement.current.value;
-        props.dispatch({
-            type: 'UPDATE-NEW-MESSAGE-TEXT',
-            newMessage: message
-        });
+        props.dispatch(updateNewMessageTextActionCreator(message));
     }
 
     return (
