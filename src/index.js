@@ -2,7 +2,6 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-// import state, {addMessage, addPost, subscribe, updateNewMessageText, updateNewPostText} from "./redux/state";
 import store from './redux/state';
 import ReactDOM from "react-dom";
 import App from "./App";
@@ -13,6 +12,7 @@ function rerenderEntireTree(state) {
         <React.StrictMode>
             <App state={state}
                  dispatch={store.dispatch.bind(store)}
+                 store={store}
             />
         </React.StrictMode>,
         document.getElementById('root')
