@@ -1,7 +1,7 @@
 import classes from './SendMessageBlock.module.css';
 import {Button, Input} from 'antd';
 import * as React from "react";
-import {sendMessageCreator, updateNewMessageBodyCreator} from '../../../redux/state';
+import {sendMessageCreator, updateNewMessageBodyCreator} from '../../../redux/dialogsReducer';
 
 const {TextArea} = Input;
 
