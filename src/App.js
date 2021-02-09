@@ -16,14 +16,8 @@ function App(props) {
                 <Navbar/>
                 <div className="app-wrapper-content">
                     <Switch>
-                        <Route path={"/profile"}
-                               render={
-                                   () => <Profile store={props.store}/>
-                               }/>
-                        <Route path={"/dialogs"}
-                               render={
-                                   () => <Dialogs store={props.store}/>
-                               }/>
+                        <Route path={"/profile"} component={Profile}/>
+                        <Route path={"/dialogs"} component={Dialogs}/>
                         <Route path={"/news"} component={News}/>
                         <Route path={"/music"} component={Music}/>
                         <Route path={"/settings"} component={Settings}/>
