@@ -1,7 +1,7 @@
 import classes from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
-import SendMessageBlock from './SendMessageBlock/SendMessageBlock';
+import SendMessageBlockContainer from './SendMessageBlock/SendMessageBlockContainer';
 
 function Dialogs(props) {
 
@@ -24,9 +24,8 @@ function Dialogs(props) {
                 <div>
                     {messagesElements}
                 </div>
-                <SendMessageBlock
-                    dispatch={props.store.dispatch.bind(props.store)}
-                    messageText={state.newMessageBody}
+                <SendMessageBlockContainer
+                    store={props.store}
                 />
             </div>
         </div>

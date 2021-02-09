@@ -8,13 +8,9 @@ const {TextArea} = Input;
 function SendMessageBlock(props) {
 
 
-    function onSendMessageClick() {
-        props.dispatch(sendMessageCreator());
-    }
 
-    function onNewMessageChange(e) {
-        let message = e.target.value;
-        props.dispatch(updateNewMessageBodyCreator(message));
+    function onNewMessageChange(message) {
+        props.onNewMessageChange(message);
     }
 
     return (
@@ -24,7 +20,7 @@ function SendMessageBlock(props) {
                           rows="5" value={props.messageText} placeholder={"Enter you messages.."}/>
             </div>
             <div>
-                <Button onClick={onSendMessageClick} type="danger">Send-></Button>
+                <Button onClick={props.onSendMessageClick} type="danger">Send-></Button>
             </div>
         </div>
     );

@@ -13,16 +13,14 @@ function MyPosts(props) {
         el => <Post message={el.message} likesCount={el.likesCount}/>
     );
 
-    let newPostElement = React.createRef();
-
-    function addPost() {
-        props.dispatch(addPostActionCreator());
+    function onAddPost() {
+        props.addPost();
     }
 
-    function onPostChange() {
-        let text = newPostElement.current.value;
+    function onPostChange(e) {
+        let text = e.target.value;
 
-        props.dispatch(updateNewPostTextActionCreator(text));
+        props.updateNewPostText(text);
     }
 
     return (
@@ -30,11 +28,11 @@ function MyPosts(props) {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea onChange={onPostChange} rows={4} ref={newPostElement}
+                    <textarea onChange={onPostChange} rows={4}
                               value={props.newPostText}/>
                 </div>
                 <div>
-                    <Button onClick={addPost} type="primary">Add Post</Button>
+                    <Button onClick={onAddPost} type="primary">Add Post</Button>
                 </div>
             </div>
             <div className={classes.posts}>
