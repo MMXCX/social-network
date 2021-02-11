@@ -18,8 +18,8 @@ function MyPosts(props) {
 
     function onPostChange(e) {
         let text = e.target.value;
-
-        props.updateNewPostText(text);
+debugger
+        props.onPostChange(text);
     }
 
     return (
