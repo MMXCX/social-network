@@ -24,21 +24,28 @@ let initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SEND_MESSAGE:
+        case SEND_MESSAGE: {
             let newMessage = {
                 id: 7,
                 message: state.newMessageBody,
                 side: 'to'
             }
-            state.messages.push(newMessage);
-            state.newMessageBody = '';
 
-            return state;
+            let newState = {...state};
+            newState.messages = [...state.messages];
+            newState.messages.push(newMessage);
+            newState.newMessageBody = '';
 
-        case UPDATE_NEW_MESSAGE_BODY:
-            state.newMessageBody = action.body;
+            return newState;
+        }
 
-            return state;
+        case UPDATE_NEW_MESSAGE_BODY: {
+            //In this place no need deep copy. Because changed only discrete string.
+            let newState = {...state};
+            newState.newMessageBody = action.body;
+
+            return newState;
+        }
         default:
             return state;
     }
