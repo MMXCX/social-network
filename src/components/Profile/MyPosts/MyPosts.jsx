@@ -18,7 +18,7 @@ function MyPosts(props) {
 
     function onPostChange(e) {
         let text = e.target.value;
-debugger
+
         props.onPostChange(text);
     }
 
@@ -27,7 +27,7 @@ debugger
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea onChange={onPostChange} rows={4}
+                    <TextArea onChange={onPostChange} rows={4}
                               value={props.newPostText}/>
                 </div>
                 <div>

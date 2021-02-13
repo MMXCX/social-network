@@ -3,7 +3,6 @@ import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 import {Button, Input} from "antd";
 import * as React from "react";
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialogsReducer";
 
 const {TextArea} = Input;
 
@@ -39,7 +38,7 @@ function Dialogs(props) {
                 <div>
                     <div>
                         <TextArea onChange={onNewMessageChange} className={classes.inputMessage}
-                                  rows="5" value={state.messageText} placeholder={"Enter you messages.."}/>
+                                  rows="5" value={state.newMessageBody} placeholder={"Enter you messages.."}/>
                     </div>
                     <div>
                         <Button onClick={onSendMessageClick} type="danger">Send-></Button>
