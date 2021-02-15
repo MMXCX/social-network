@@ -1,5 +1,6 @@
 import classes from './Users.module.css';
 import UserBlock from './UserBlock/UserBlock.jsx';
+import axios from 'axios';
 
 const Users = (props) => {
     if (props.users.length === 0) {
@@ -39,8 +40,6 @@ const Users = (props) => {
         ]);
     }
 
-
-    console.log(props)
     const UsersListEl = props.users.map(
         (el) => <UserBlock key={el.id} user={el} follow={props.follow} unFollow={props.unFollow}/>
     );
