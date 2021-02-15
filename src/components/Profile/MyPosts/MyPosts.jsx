@@ -9,7 +9,7 @@ const {TextArea} = Input;
 function MyPosts(props) {
 
     let postsElements = props.posts.map(
-        el => <Post message={el.message} likesCount={el.likesCount}/>
+        el => <Post message={el.message} key={el.id} likesCount={el.likesCount}/>
     );
 
     function onAddPost() {

@@ -10,11 +10,11 @@ function Dialogs(props) {
     let state = props.state;
 
     let dialogsElements = state.dialogs.map(
-        d => <DialogItem name={d.name} id={d.id} avatarUrl={d.avatarUrl}/>
+        d => <DialogItem name={d.name} key={d.id} id={d.id} avatarUrl={d.avatarUrl}/>
     );
 
     let messagesElements = state.messages.map(
-        m => <Message message={m.message} side={m.side}/>
+        m => <Message message={m.message} key={m.id} side={m.side}/>
     );
 
     function onSendMessageClick() {

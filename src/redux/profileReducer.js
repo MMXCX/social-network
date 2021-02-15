@@ -20,18 +20,19 @@ const profileReducer = (state = initialState, action) => {
                 message: state.newPostText,
                 likesCount: 0
             }
-            let newState = {...state};
-            newState.posts = [...state.posts];
-            newState.posts.push(newPost);
-            newState.newPostText = '';
-
-            return newState;
+            return {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: ''
+            }
         }
         case UPDATE_NEW_POST_TEXT: {
             //In this place no need deep copy. Because changed only discrete string.
-            let newState = {...state};
+            return {
+                ...state,
+                newPostText: action.newText
+            };
             newState.newPostText = action.newText;
-            return newState;
         }
         default:
             return state;
