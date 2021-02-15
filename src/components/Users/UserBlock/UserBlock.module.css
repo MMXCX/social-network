@@ -1,0 +1,15 @@
+.userBlock {
+    background: #033;
+    border: 1px solid #3f3;
+    border-radius: 4px;
+    margin: 10px;
+    padding:10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.avatar {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50px;
+}
