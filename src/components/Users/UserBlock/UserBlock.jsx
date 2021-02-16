@@ -6,13 +6,16 @@ const UserBlock = (props) => {
     return (
         <div className={classes.userBlock}>
             <span>
-                <img className={classes.avatar} src={user.avatarUrl} alt="user.avatarUrl"/>
+                <img className={classes.avatar} src={
+                    user.photos.small != null ? user.photos.small : "http://host2.loc/img/user.webp"
+                } alt="avatar"/>
                 <Button onClick={() => user.followed ? props.unFollow(user.id) : props.follow(user.id)} type="primary">
                     {user.followed ? 'Unfollow' : 'Follow'}
                 </Button>
             </span>
             <span>
-                <p>Full name - {user.fullName}</p>
+                <p>Id - {user.id}</p>
+                <p>Name - {user.name}</p>
                 <p>Status - {user.status}</p>
                 <p>Followed - {user.followed.toString()}</p>
             </span>

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="669b2fbb-bbaa-4888-b5bd-7bf7d574f1b3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UserBlock/UserBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UserBlock/UserBlock.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/UserBlock/UserBlock.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UserBlock/UserBlock.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.19071837" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -202,7 +204,9 @@
       <workItem from="1613112876419" duration="136000" />
       <workItem from="1613176001569" duration="8091000" />
       <workItem from="1613369181995" duration="120000" />
-      <workItem from="1613369312223" duration="20708000" />
+      <workItem from="1613369312223" duration="21151000" />
+      <workItem from="1613435210283" duration="11000" />
+      <workItem from="1613435275159" duration="5149000" />
     </task>
     <servers />
   </component>

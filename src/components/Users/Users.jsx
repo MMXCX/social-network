@@ -1,43 +1,20 @@
 import classes from './Users.module.css';
 import UserBlock from './UserBlock/UserBlock.jsx';
-import axios from 'axios';
+import * as axios from 'axios';
 
 const Users = (props) => {
-    if (props.users.length === 0) {
-        props.setUsers([
-            {
-                id: 1,
-                avatarUrl: 'http://host2.loc/img/face-2.jpeg',
-                followed: true,
-                fullName: 'Sergey P',
-                status: 'Junior',
-                location: {country: 'Belarus', city: 'Vitebsk'}
-            },
-            {
-                id: 2,
-                avatarUrl: 'http://host2.loc/img/face-1.jpg',
-                followed: true,
-                fullName: 'Olga S',
-                status: 'Team lead',
-                location: {country: 'Belarus', city: 'Minsk'}
-            },
-            {
-                id: 3,
-                avatarUrl: 'http://host2.loc/img/face-3.jpg',
-                followed: false,
-                fullName: 'Mark P',
-                status: 'Boss of company',
-                location: {country: 'Belarus', city: 'Grodno'}
-            },
-            {
-                id: 4,
-                avatarUrl: 'http://host2.loc/img/face-4.png',
-                followed: false,
-                fullName: 'Martin V',
-                status: 'Commercial editor',
-                location: {country: 'Russia', city: 'Moscow'}
+    if (props.users.length == 0) {
+        axios.get("https://social-network.samuraijs.com/api/1.0/users", {
+            params: {
+                count: 10,
+                term: "Mark"
             }
-        ]);
+        }).then(
+            response => {
+                console.log(response);
+                props.setUsers(response.data.items)
+            }
+        );
     }
 
     const UsersListEl = props.users.map(
