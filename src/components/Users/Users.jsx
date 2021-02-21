@@ -3,18 +3,20 @@ import UserBlock from './UserBlock/UserBlock.jsx';
 import * as axios from 'axios';
 
 const Users = (props) => {
-    if (props.users.length == 0) {
-        axios.get("https://social-network.samuraijs.com/api/1.0/users", {
-            params: {
-                count: 10,
-                term: "Mark"
-            }
-        }).then(
-            response => {
-                console.log(response);
-                props.setUsers(response.data.items)
-            }
-        );
+    let getUsers = () => {
+        if (props.users.length === 0) {
+            axios.get("https://social-network.samuraijs.com/api/1.0/users", {
+                params: {
+                    count: 10,
+                    term: "Mark"
+                }
+            }).then(
+                response => {
+                    console.log(response);
+                    props.setUsers(response.data.items)
+                }
+            );
+        }
     }
 
     const UsersListEl = props.users.map(
@@ -22,6 +24,7 @@ const Users = (props) => {
     );
     return (
         <div>
+            <button onClick={getUsers}>Get Users</button>
             {UsersListEl}
         </div>
     );

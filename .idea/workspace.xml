@@ -4,8 +4,6 @@
     <list default="true" id="669b2fbb-bbaa-4888-b5bd-7bf7d574f1b3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UserBlock/UserBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UserBlock/UserBlock.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Users/UserBlock/UserBlock.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/UserBlock/UserBlock.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Users/Users.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,6 +205,7 @@
       <workItem from="1613369312223" duration="21151000" />
       <workItem from="1613435210283" duration="11000" />
       <workItem from="1613435275159" duration="5149000" />
+      <workItem from="1613927982632" duration="1241000" />
     </task>
     <servers />
   </component>
