@@ -1,0 +1,11 @@
+.selectedPage {
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+}
+
+.unSelectedPage {
+    font-weight: bold;
+    font-size: 16px;
+    color: #aaa;
+}
