@@ -19,7 +19,6 @@ const UserBlock = (props) => {
                 <p>Status - {user.status}</p>
                 <p>Followed - {user.followed.toString()}</p>
             </span>
-
         </div>
     );
 }
