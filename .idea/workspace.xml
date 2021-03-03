@@ -68,6 +68,7 @@
       <recent name="$PROJECT_DIR$/src/components/Users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/common/Preloader" />
       <recent name="$PROJECT_DIR$/src/components/Profile" />
       <recent name="$PROJECT_DIR$/src/components/Navbar" />
       <recent name="$PROJECT_DIR$/src/components/Header" />
@@ -216,7 +217,9 @@
       <workItem from="1614004544558" duration="14520000" />
       <workItem from="1614041731235" duration="1497000" />
       <workItem from="1614439472849" duration="7519000" />
-      <workItem from="1614730749501" duration="2900000" />
+      <workItem from="1614730749501" duration="3622000" />
+      <workItem from="1614774332397" duration="38000" />
+      <workItem from="1614774379703" duration="1827000" />
     </task>
     <servers />
   </component>
