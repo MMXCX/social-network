@@ -12,3 +12,23 @@
     width: 100%;
 }
 
+p {
+    color: #fff;
+    font-size: 16px;
+}
+
+p b {
+    color: #0f0;
+}
+
+.contacts {
+    border: 2px solid #0f0;
+    margin: 5px;
+    padding: 5px;
+}
+
+.fullName {
+    font-size: 22px;
+    color: #ff0;
+}
+
