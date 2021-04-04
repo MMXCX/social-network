@@ -19,8 +19,8 @@ let Users = (props) => {
                     return (
                         <span key={p}
                               className={props.currentPage === p ? classes.selectedPage : classes.unSelectedPage}
-                              onClick={(e) => props.onPageChanged(p)
-                              }>{p}</span>
+                              onClick={() => props.onPageChanged(p)}
+                        >{p}</span>
                     );
                 })}
             </div>
