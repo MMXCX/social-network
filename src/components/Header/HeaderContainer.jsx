@@ -17,6 +17,14 @@ class HeaderContainer extends React.Component {
                         response.data.data.email,
                         response.data.data.login
                     );
+                    axios.get(
+                        "https://social-network.samuraijs.com/api/1.0/profile/" + response.data.data.id,
+                        {withCredentials: true}
+                    ).then(
+                        response => {
+                            // console.log(response.data)
+                        }
+                    );
                 }
             }
         );
