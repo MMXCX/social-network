@@ -4,7 +4,13 @@ import UserBlock from './UserBlock/UserBlock.jsx';
 
 let Users = (props) => {
     let usersListEl = props.users.map(
-        (el) => <UserBlock key={el.id} user={el} follow={props.follow} unFollow={props.unFollow}/>
+        (el) => <UserBlock key={el.id}
+                           user={el}
+                           follow={props.follow}
+                           unFollow={props.unFollow}
+                           toggleFollowingProgress={props.toggleFollowingProgress}
+                           followingInProgress={props.followingInProgress}
+        />
     );
 
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);

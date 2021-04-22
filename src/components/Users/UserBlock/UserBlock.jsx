@@ -1,7 +1,7 @@
 import classes from "./UserBlock.module.css";
-import { Button } from "antd";
-import { NavLink } from "react-router-dom";
-import { usersAPI } from "../../../api/api";
+import {Button} from "antd";
+import {NavLink} from "react-router-dom";
+import {usersAPI} from "../../../api/api";
 
 const UserBlock = (props) => {
     let user = props.user;
@@ -24,11 +24,14 @@ const UserBlock = (props) => {
         <div>
           {user.followed ? (
               <Button
+                  disabled={props.followingInProgress.some(id => id === user.id)}
                   onClick={() => {
+                      props.toggleFollowingProgress(true, user.id);
                       usersAPI.unfollowUser(user.id).then((data) => {
                           if (data.resultCode === 0) {
                               props.unFollow(user.id);
                           }
+                          props.toggleFollowingProgress(false, user.id);
                       });
                   }}
               >
@@ -36,11 +39,14 @@ const UserBlock = (props) => {
               </Button>
           ) : (
               <Button
+                  disabled={props.followingInProgress.some(id => id === user.id)}
                   onClick={() => {
+                      props.toggleFollowingProgress(true, user.id);
                       usersAPI.followUser(user.id).then((data) => {
                           if (data.resultCode === 0) {
                               props.follow(user.id);
                           }
+                          props.toggleFollowingProgress(false, user.id);
                       });
                   }}
               >
